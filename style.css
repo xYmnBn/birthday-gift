@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #fde2e4, #fff);
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   🌸 หน้าเริ่ม "เริ่มกันเลย"
+================================ */
+.start-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, #fecdd3, #fff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.start-screen h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.start-screen button {
+    background: #ec4899;
+    border: none;
+    color: white;
+    padding: 16px 40px;
+    font-size: 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.start-screen button:hover {
+    background: #db2777;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   🌙 โครงสร้างเดิมของคุณ
+================================ */
+.container {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+h1 {
+    color: #e11d48;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 12px;
+}
+
+button {
+    background: #ec4899;
+    border: none;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #db2777;
+}
+
+#message {
+    margin-top: 20px;
+    color: #374151;
+    font-size: 15px;
+}
+
+/* ===============================
+   💖 หัวใจลอย
+================================ */
+.hearts span {
+    position: fixed;
+    bottom: -10px;
+    font-size: 18px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* ===============================
+   💌 MESSAGE V2
+================================ */
+#message2 {
+    margin-top: 25px;
+    animation: fadeIn 1.5s ease;
+}
+
+#message2 img {
+    width: 100%;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+.birthday-text {
+    color: #be123c;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ===============================
+   🤍 MESSAGE V3
+================================ */
+#message3 {
+    margin-top: 30px;
+    animation: fadeIn 2s ease;
+}
+
+.floating-img {
+    width: 100%;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    animation: floatSlow 6s ease-in-out infinite;
+}
+
+.floating-img.delay {
+    animation-delay: 2s;
+}
+
+.deep-text {
+    color: #374151;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-top: 15px;
+}
+
+@keyframes floatSlow {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ===============================
+   🎁 กล่องของขวัญ
+================================ */
+#giftBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 80px;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 1s ease;
+}
+
+#giftBox.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* ===============================
+   🎉 หน้าสุดท้าย
+================================ */
+#finalSurprise {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 240, 246, 0.95);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+#finalSurprise img {
+    width: 80%;
+    max-width: 320px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#finalSurprise h1 {
+    color: #e11d48;
+    font-size: 28px;
+}
+
+/* ===============================
+   💥 ระเบิดหัวใจ
+================================ */
+.explode {
+    position: fixed;
+    font-size: 24px;
+    animation: explode 2s ease-out forwards;
+}
+
+@keyframes explode {
+    from {
+        transform: translate(0,0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translate(var(--x), var(--y)) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* ===============================
+   🌸 เอฟเฟกต์เฟด
+================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

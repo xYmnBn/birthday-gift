@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🎵 เพลง (ควบคุมโดย script.js) -->
+    <audio id="bgm"></audio>
+
+    <!-- 💖 เอฟเฟกต์หัวใจ -->
+    <div class="hearts"></div>
+
+    <!-- 🌸 หน้าเริ่ม -->
+    <div id="startScreen" class="start-screen">
+        <h1>💖</h1>
+        <button onclick="startWebsite()">เริ่มกันเลย</button>
+    </div>
+
+    <!-- 🌙 เนื้อหาเว็บจริง (ซ่อนตอนแรก) -->
+    <div id="mainContent" style="display:none;">
+
+        <div class="container">
+            <h1>สุขสันต์วันเกิดนะอายอ่วงของเค้าาาา 💖</h1>
+            <p class="subtitle">ขอบคุณที่เข้ามาเป็นรอยยิ้มของเค้าน้าา</p>
+
+            <!-- รูป -->
+            <div class="gallery">
+                <img src="images/pic1.jpg">
+                <img src="images/pic2.jpg">
+                <img src="images/pic3.jpg">
+            </div>
+
+            <!-- ปุ่ม -->
+            <button id="btn1" onclick="showMessage()">กดอ่านความในใจ 💌</button>
+
+            <button id="btn2" onclick="showMessageV2()" style="display:none;">
+                อ่านความในใจ V2 💖
+            </button>
+
+            <button id="btn3" onclick="showMessageV3()" style="display:none;">
+                อ่านความในใจ V3 🤍
+            </button>
+
+            <!-- ข้อความ -->
+            <div id="message"></div>
+            <div id="message2"></div>
+            <div id="message3"></div>
+
+            <!-- 🎁 กล่องของขวัญ -->
+            <div id="giftBox" onclick="openGift()">🎁</div>
+
+            <!-- 🎉 เซอร์ไพรส์สุดท้าย -->
+            <div id="finalSurprise">
+                <img src="images/final.jpg">
+                <h1>สุขสันต์วันเกิดนะครับบ 🎉💖</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
